@@ -9,14 +9,13 @@ const NavBar = () => {
 
   const handleOpen = () => {
     setIsOpen(!isOpen)
-    console.log(isOpen)
   }
 
   return (
     <div>
 {/* NavBar */}
 
-        <nav className="flex  justify-between justify-items-center px-6 py-4 w-full">
+        <nav className="z-50 sticky top-0  left-0 flex  justify-between justify-items-center px-6 py-4 w-full">
             {/* logo */}
             <h1 className="text-yellow-700 font-extrabold text-6xl">PRS</h1>
             
@@ -37,7 +36,7 @@ const NavBar = () => {
         {navLinks.map((navLink, index) => {
             return (
                 
-                    <li key={index} className='py-8' >
+                    <li key={index} className='py-8' onClick={handleOpen} >
                         <Link className='text-black' href={navLink.url}>{navLink.name}</Link>
                     </li>
             )
@@ -49,9 +48,6 @@ const NavBar = () => {
         
         }
        
-        
-
-
     </div>
   )
 }
