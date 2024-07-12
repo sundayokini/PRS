@@ -1,11 +1,18 @@
-const features = [
+interface Feature {
+    title: string;
+    description: string;
+    url:string;
+    linkdesc: string;
+}
+
+const features:Feature[] = [
     {title:'Employee Directory',
-        description:'View and manage the employee directory.',
+        description:'View and manage the employee directory',
         url:'/directory',
         linkdesc:'Go to Employee Directory'
     },
     {title:'Employee Profile',
-        description:'View detailed profiles of employees.',
+        description:'View detailed profiles of employees',
         url:'/profile',
         linkdesc:'Go to Employee profiles'
     },
